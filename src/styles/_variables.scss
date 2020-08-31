@@ -1,0 +1,11 @@
+$font-color: rgb(223, 223, 223);
+$sec-font-color: rgb(182, 182, 182);
+
+$base-color: #262626;
+
+$primary-shadow-color: #181818;
+$secondary-shadow-color: #343434;
+
+@mixin shadow-style {
+  box-shadow: -20px -20px 36px #181818, 20px 20px 36px #343434;
+}

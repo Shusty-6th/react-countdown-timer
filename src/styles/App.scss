@@ -1,0 +1,197 @@
+@import "variables";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 700px;
+
+  border-radius: 50px;
+  overflow: hidden;
+
+  background: $base-color;
+  box-shadow: 41px 41px 34px #202020, -41px -41px 34px #2c2c2c;
+
+  header {
+    height: 350px;
+    width: 100%;
+    position: relative;
+    background-color: $base-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    button {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 10px;
+      right: 20px;
+
+      background-color: $base-color;
+      color: $font-color;
+      font-size: 20px;
+
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(145deg, #292929, #222222);
+      box-shadow: 5px 5px 10px #151515, -5px -5px 10px #373737;
+
+      &:hover {
+        background: linear-gradient(145deg, #222222, #292929);
+        color: white;
+      }
+
+      &.active {
+        background: #262626;
+        box-shadow: inset 5px 5px 10px #151515, inset -5px -5px 10px #373737;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  section.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 0px;
+
+    text-align: center;
+    padding: -100px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &.active {
+      max-height: 500px;
+      padding: 20px 20px 20px 20px;
+    }
+
+    h2 {
+      width: 120px;
+      padding: 10px 20px;
+
+      border-radius: 5px;
+    }
+
+    div.fields {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      padding-top: 12px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        height: auto;
+        color: $sec-font-color;
+
+        span {
+          margin-right: 10px;
+        }
+
+        input {
+          display: block;
+          width: auto;
+          height: auto;
+          font-size: 14px;
+          width: 190px;
+          padding: 10px 5px 8px 8px;
+
+          color: $font-color;
+
+          background-color: transparent;
+          border: none;
+          font-family: roboto, sans-serif;
+
+          border-radius: 5px;
+          background: #262626;
+          box-shadow: inset 6px 6px 12px #1b1b1b, inset -6px -6px 12px #313131;
+
+          &:focus {
+            outline: none;
+            background: #262626;
+            box-shadow: inset 6px 6px 12px #111111, inset -6px -6px 12px #3b3b3b;
+          }
+        }
+      }
+    }
+  }
+
+  div.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+
+    padding: 20px 40px 40px;
+
+    h2.nameOfTheEvent {
+      font-size: 20px;
+      color: $sec-font-color;
+      margin-bottom: 25px;
+      padding: 10px;
+
+      span {
+        font-size: 30px;
+        color: $font-color;
+      }
+    }
+
+    div.items {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      div.counterItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        padding: 5px;
+        height: 80px;
+        width: 100px;
+
+        @include shadow-style;
+        border-radius: 7px;
+        background: #262626;
+        box-shadow: 9px 9px 12px #1c1c1c, -9px -9px 12px #303030;
+
+        h2 {
+          margin: 0;
+          font-family: "Share Tech Mono", monospace;
+        }
+        h3 {
+          text-transform: uppercase;
+          font-size: 13px;
+          color: $sec-font-color;
+        }
+      }
+    }
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
