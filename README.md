@@ -1,5 +1,6 @@
 ## Project
 A quick little frontend project for an exercise.
+
 Live Demo: https://shusty-6th.github.io/SimpleSearchApp/
 
 
