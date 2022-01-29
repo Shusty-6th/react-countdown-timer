@@ -7,7 +7,7 @@ import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 class App extends Component {
   state = {
     nameOfTheEvent: "End of the world",
-    countdownDate: "2022-01-01T21:37:00", // new Date("2050-01-01T16:39:57"),
+    countdownDate: "2024-01-01T21:37:00", // new Date("2050-01-01T16:39:57"),
     imgLink: "https://i.imgur.com/0VvOUXk.png",
     counterItems: {
       seconds: "00",
